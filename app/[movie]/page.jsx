@@ -1,5 +1,12 @@
 import Image from "next/image"
 
+/* Here is the explanation for the code below:
+1. We import the fetch function from node-fetch
+2. We import the Image component from next/image
+3. We use the getStaticPaths function to generate the paths for the pages
+4. We use the getStaticProps function to pass the data from our API to the component as props
+5. We use the Image component to display the movie poster */
+
 export async function generateStaticParams() {
     const data = await fetch(
         `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
